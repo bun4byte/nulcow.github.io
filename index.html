@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MC Wardrobe - Simple Skin Editor</title>
+		<link rel="stylesheet" type="text/css" href="wardrobe.css">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<header id="pageHeader">
+				<h1 id="headerText">MC Wardrobe - Simple Skin Editor</h1>
+			</header>
+
+			<main id="page">
+				<h2 id="editorTitle">Edit</h2>
+				<div id="editorSplit">
+					<div id="editorPreview" class="editor-col">
+						<canvas id="previewImage" width="240" height="240"></canvas>
+					</div>
+
+					<div id="editorMain">
+
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+
+	<script type="importmap">
+	  {
+	    "imports": {
+	      "three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.js",
+	      "three/addons/": "https://cdn.jsdelivr.net/npm/three@<version>/examples/jsm/"
+	    }
+	  }
+	</script>
+	<script type="module" src="wardrobe.js"></script>
+</html>

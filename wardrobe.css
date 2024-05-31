@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("img/stone-bg.png");
+	background-size: 32px 32px;
+	image-rendering: crisp-edges;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: white;
+}
+
+.editor-col {
+	padding: 12px;
+}
+
+#pageHeader {
+	padding: 12px;
+	background-image: linear-gradient(transparent, #0004);
+}
+
+#pageHeader #headerText {
+	padding: 0;
+	margin: 0;
+	text-shadow: 0 2px 3px #202020cc;
+}
+
+#page {
+	width: 100%;
+	height: fit-content;
+	padding: 12px;
+	background-color: #202020cc;
+}
+
+#editorTitle {
+	padding: 0;
+	margin-bottom: 4px;
+}
+
+#editorSplit {
+	display: flex;
+	width: 100%;
+	border-top: 1px solid #fff8;
+}
+
+#editorPreview {
+	width: fit-content;
+	border-right: 1px solid #fff4;
+}
+
+#editorMain {
+	flex: 1;
+}

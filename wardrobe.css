@@ -6,7 +6,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-image: url("img/stone-bg.png");
-	background-size: 32px 32px;
+	background-size: 48px 48px;
 	image-rendering: crisp-edges;
 	color: white;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -19,10 +19,16 @@ h1 {
 
 h2 {
 	font-size: 28px;
+	padding: 0;
+	margin: 12px 0;
+	border-bottom: 1px solid #fff4;
 }
 
 h3 {
 	font-size: 24px;
+	padding: 0;
+	margin: 8px 0;
+	padding-bottom: 4px;
 }
 
 h4 {
@@ -37,8 +43,184 @@ h6 {
 	font-size: 14px;
 }
 
+hr {
+	height: 1px;
+	padding: 0;
+	margin: 12px 0;
+	border: none;
+	background-color: #0004;
+	box-shadow: 0 1px 0 #fff8;
+}
+
+.panel-title {
+	display: block;
+	margin-bottom: 4px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.btn-sm, .btn-md, .btn-lg, .btn-xl {
+	appearance: none;
+	-webkit-appearance: none;
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+.btn-sm.action-btn, .btn-md.action-btn {
+	box-shadow: inset 0 1px 0 #fff4, inset 0 -1px 0 #0004;
+}
+.btn-sm.action-btn:active, .btn-md.action-btn:active {
+	box-shadow: inset 0 -1px 0 #fff4, inset 0 1px 0 #0004;
+}
+
+.btn-lg.action-btn, .btn-xl.action-btn {
+	box-shadow: inset 0 2px 0 #fff4, inset 0 -2px 0 #0004;
+}
+.btn-lg.action-btn:active, .btn-xl.action-btn:active {
+	box-shadow: inset 0 -2px 0 #fff4, inset 0 2px 0 #0004;
+}
+
+.action-btn {
+	text-shadow: 0 -1px 0 #0004;
+	color: white;
+}
+
+.action-btn.btn-sm {
+	padding: 0 4px;
+	height: 24px;
+}
+
+.action-btn.btn-md {
+	padding: 0 8px;
+	height: 28px;
+}
+
+.action-btn.btn-lg {
+	padding: 0 12px;
+	height: 32px;
+}
+
+.action-btn.btn-xl {
+	padding: 0 24px;
+	height: 48px;
+	font-size: 16px;
+}
+
+.action-btn.primary {
+	background-color: #30c040;
+}
+.action-btn.primary:hover {
+	background-color: #50e060;
+}
+.action-btn.primary:active {
+	background-color: #10a020;
+}
+
+.action-btn.positive {
+	background-color: #4488ff;
+}
+.action-btn.positive:hover {
+	background-color: #66aaff;
+}
+.action-btn.positive:active {
+	background-color: #3366dd;
+}
+
 .editor-col {
 	padding: 12px;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+}
+
+.editor-tab {
+	flex: 1;
+	padding: 8px 12px;
+	color: white;
+	border-right: 1px solid #0004;
+	border-left: 1px solid #fff4;
+	text-decoration: none;
+	text-shadow: 0 -1px 0 #0004;
+}
+.editor-tab:first-child {
+	border-left: none;
+}
+.editor-tab:last-child {
+	box-shadow: 1px 0 0 #fff4;
+}
+.editor-tab:hover {
+	background-color: #fff2;
+	box-shadow: inset 0 0 0 1px #fff;
+}
+.editor-tab:active {
+	background-color: #0004;
+	box-shadow: inset 0 2px 0 #0008;
+}
+
+.editor-control-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.editor-control-wrapper span {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.editor-control-wrapper-block span {
+	display: block;
+	margin-bottom: 4px;
+}
+
+.editor-control-wrapper, .editor-control-wrapper-block {
+	margin-bottom: 8px;
+}
+
+.editor-tile-picker {
+	/*padding-top: 8px;
+	padding-left: 8px;*/
+	/*padding: 8px;
+	background-color: #eee;
+	border: 1px solid #0008;
+	box-shadow: inset 0 0 0 1px #fff;*/
+}
+
+.editor-option-tile {
+	/*height: 96px;
+	width: 96px;*/
+	height: 24px;
+	width: 100%;
+	margin-right: 8px;
+	/*margin-bottom: 8px;*/
+	padding: 4px;
+	border: 1px solid #0008;
+	background-color: #fff;
+}
+.editor-option-tile:hover {
+	/*box-shadow: 0 0 0 2px #aaccff;*/
+	background-color: #aaccff;
+}
+.editor-option-tile[data-selected="true"] {
+	/*box-shadow: 0 0 0 2px #6688ff, 0 0 0 3px #aaccff;*/
+	background-color: #6688ff;
+	color: white;
+}
+
+.editor-option-tile:not(:first-child) {
+	border-top: none;
 }
 
 #pageHeader {
@@ -61,20 +243,41 @@ h6 {
 
 #editorTitle {
 	padding: 0;
-	margin-bottom: 4px;
+	margin-top: 0;
 }
 
 #editorSplit {
 	display: flex;
 	width: 100%;
-	border-top: 1px solid #fff8;
+	max-width: 800px;
+	margin: auto;
+	border: 1px solid #000;
+	background-color: #ddd;
+	box-shadow: inset 0 1px 0 #fff;
+	color: black;
 }
 
 #editorPreview {
 	width: fit-content;
-	border-right: 1px solid #fff4;
+	border-right: 1px solid #0008;
+}
+
+#previewImage {
+	border: 1px solid #000;
 }
 
 #editorMain {
 	flex: 1;
+	border-left: 1px solid #fff;
+}
+
+#editorNav {
+	border: 1px solid #000;
+	background-color: #30c040;
+	box-shadow: inset 0 2px 0 #fff8, inset 0 -2px 0 #0004;
+}
+
+#saveButtonsContainer {
+	width: fit-content;
+	margin: auto;
 }
